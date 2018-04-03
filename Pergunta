@@ -7,7 +7,7 @@ public class Question {
   String question;
   String questionS[];
   int optionS[];
-  public boolean responder(int optionR) {
+  public boolean answering(int optionR) {
 	  if(optionR==answser){
 		  return true;
 	  }else {
@@ -24,7 +24,7 @@ public class Question {
        pergunta1.responder2();
        Scanner entrada=new Scanner(System.in); 
 	   int resposta=entrada.nextInt();
-	   Monstro monstro1=new monstro();
+	   Monster monster1=new Monster();
 	   monstro1.perdeVida(pergunta1.responder(resposta));
   }
   public void answering2(){
