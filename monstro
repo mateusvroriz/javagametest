@@ -1,0 +1,24 @@
+ackage labirinto;
+
+import java.util.Scanner;
+
+public class monstro {
+   private int health=3;
+   private String nome;
+   public  int pas;
+   public int fase;
+   public void perdevida(Boolean result) {
+	   if(result) {
+		    health=health-1;
+	   }else {
+		   health=health;
+	   }
+	   System.out.println(health);
+   }
+   public void morre() {
+	   if(health==0){
+		   System.out.println(" o monstro morreu");
+	   }
+   }
+  
+}
