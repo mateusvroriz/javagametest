@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 public class Monster {
    private int health=3;
-   private String nome;
-   public  int pas;
-   public int fase;
+   private String name;
+   public int level;
    public void worstLife(Boolean result) {
 	   if(result) {
 		    health=health-1;
