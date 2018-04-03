@@ -25,7 +25,7 @@ public class Question {
        Scanner entrada=new Scanner(System.in); 
 	   int resposta=entrada.nextInt();
 	   Monster monster1=new Monster();
-	   monstro1.perdeVida(pergunta1.responder(resposta));
+	   monstro1.worstLife(pergunta1.responder(resposta));
   }
   public void answering2(){
 	 questao="quem descobriu o brasil";
