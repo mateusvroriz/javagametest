@@ -1,34 +1,34 @@
 package labirinto;
 
 import java.util.Scanner;
-import labirinto.monstro;
-public class Pergunta {
-  int resposta;
-  String texto;
-  String opcoes[];
-  int opcao[];
-  public boolean responder(int opcaor) {
-	  if(opcaor==resposta){
+import labirinto.monster;
+public class Question {
+  int answer;
+  String question;
+  String questionS[];
+  int optionS[];
+  public boolean responder(int optionR) {
+	  if(optionR==answser){
 		  return true;
 	  }else {
 	     return false;
 	  }
   }
-  public Pergunta(int resposta2,String texto2) {
-	  resposta=resposta2;
-	  texto=texto2;
+  public Question(int answerrecivied,String question) {
+	  question=answerrecivied;
+	  answer=question2;
   }
   public static void main(String[] args) { 
-	   Pergunta pergunta1=new Pergunta(2,"abc");
+	   Pergunta question1=new Question(2,"abc");
        
        pergunta1.responder2();
        Scanner entrada=new Scanner(System.in); 
 	   int resposta=entrada.nextInt();
-	   monstro monstro1=new monstro();
-	   monstro1.perdevida(pergunta1.responder(resposta));
+	   Monstro monstro1=new monstro();
+	   monstro1.perdeVida(pergunta1.responder(resposta));
   }
-  public void responder2(){
-	 texto="quem descobriu o brasil";
+  public void answering2(){
+	 questao="quem descobriu o brasil";
 	 String[]  opcoes=new String[3];
 	 opcoes[0]= "steveJobs";
 	 opcoes[1]="billgates";
