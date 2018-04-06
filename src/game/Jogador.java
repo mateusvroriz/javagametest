@@ -15,7 +15,7 @@ public class Jogador extends Sprite{
 	
 	
 	public Jogador(int x, int y) { // parameters that set the player initial location
-		super(("src//recursos//sprite//jogador.png"), 20); // img and frame number
+		super(("src//recursos//sprite//jogador2.png"), 20); // img and frame number
 		this.x = x; // setting the x and y to the passed cordinates
 		this.y = y;
 		this.setTotalDuration(2000); //millisecconds
@@ -42,7 +42,7 @@ public class Jogador extends Sprite{
 				this.x += velocidade; //evitando o jogador sair da tela
 			}
 			if(direcao !=2){
-				setSequence(8,12); // definindo sprites esquerda
+				setSequence(8,12); // definindo sprites direita
 				direcao =2 ;
 			} movendo = true;
 		}else if(teclado.keyDown(Keyboard.UP_KEY)){
@@ -51,7 +51,7 @@ public class Jogador extends Sprite{
 				this.y -= velocidade; //evitando o jogador sair da tela
 			}
 			if(direcao !=4){
-				setSequence(12,16); // definindo sprites esquerda
+				setSequence(12,16); // definindo sprites subindo
 				direcao = 4 ;
 			} movendo = true;
 		}else if(teclado.keyDown(Keyboard.DOWN_KEY)){
@@ -59,7 +59,7 @@ public class Jogador extends Sprite{
 				this.y += velocidade; //evitando o jogador sair da tela
 			}
 			if(direcao !=5){
-				setSequence(0,4); // definindo sprites esquerda
+				setSequence(0,4); // definindo sprites descendo
 				direcao =5 ;
 			} movendo = true;
 			
