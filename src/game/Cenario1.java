@@ -23,7 +23,7 @@ public class Cenario1 {
 		while(true){
 			cena.draw();
 			jogador.draw();
-			jogador.mover();
+			jogador.mover(janela);
 			janela.update();
 			
 		}
