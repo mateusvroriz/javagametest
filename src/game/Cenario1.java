@@ -19,6 +19,7 @@ public class Cenario1 {
 		cena.loadFromFile(URL.scenario("Cenario1.scn")); //carregando o arquivo com o mapa
 		jogador = new Jogador(640, 350);
 		teclado = janela.getKeyboard();
+		Som.play("doido.mid");
 		
 		run();
 	}
