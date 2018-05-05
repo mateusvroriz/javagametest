@@ -25,34 +25,34 @@ public class Ator extends Sprite{
 	 * Colisões com cenario tiles
 	 * @param cena
 	 */
-	public void caminho(Scene cena){
+	public void caminho(Scene cena, gameObject parede){
 		Point min = new Point((int)this.x,(int)this.y); 
 		Point max = new Point((int)this.x + this.width,(int)this.y + this.height); 
 		
-		Vector<?>tiles = cena.getTilesFromPosition(min,max); //retornar as imagens que estiverem no msm lugar do personagem
+		//retornar as imagens que estiverem no msm lugar do personagem
 		
-		for(int i =0; i < tiles.size(); i++){
-			TileInfo tile = (TileInfo) tiles.elementAt(i);
+		//for(int i =0; i < tiles.size(); i++){
+			//TileInfo tile = (TileInfo) tiles.elementAt(i);
 		
-			if(controle.colisao(this, tile) == true){
-				if(colisaoVertical(this, tile )){
-					if(tile.y + tile.height -2 < this.y ){ // 2 margem de segurança 
-						this.y = tile.y + tile.height; //reposicionando o personagem fora do tile
+			if(controle.colisao(this,parede) == true){
+				if(colisaoVertical(this, parede )){
+					if(parede.y + parede.height -2 < this.y ){ // 2 margem de segurança 
+						this.y = parede.y + parede.height; //reposicionando o personagem fora do tile
 					}
-					else if(tile.y > this.y+ this.height -2){ // 2 margem de segurança 
-							this.y = tile.y - this.height;
+					else if(parede.y > this.y+ this.height -2){ // 2 margem de segurança 
+							this.y = parede.y - this.height;
 						}
 					}
-					if(colisaoHorizontal(this, tile) == true){
-						if(tile.x > this.x + this.width -2 ){
-							this.x = tile.x - this.width;
+					if(colisaoHorizontal(this, parede) == true){
+						if(parede.x > this.x + this.width -2 ){
+							this.x = parede.x - this.width;
 						}else{
-							this.x = tile.x + tile.width;
+							this.x = parede.x + parede.width;
 						}
 				
 				}
 			}
-		}
+		//}
 	}
 	private boolean colisaoVertical(GameObject obj, GameObject obj2){
 		if(obj2.x + obj2.width <= obj.x){ //verificando se o ponto x é maior ou igual ao ponto x do personagme
